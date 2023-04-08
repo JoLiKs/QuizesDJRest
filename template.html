@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Конструктор квизов</title>
+<link href="css/styles.css" rel="stylesheet"/>
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" rel="stylesheet"/>
+</head>
+<body style="visibility: hidden">
+<div style="visibility: hidden" id="child">child</div>
+<div style="visibility: hidden" id="question">question</div>
+<div class="quiz" id="quiz">
+<div class="quiz-questions" id="quiz-questions"></div>
+<div class="quiz-indicator" id="quiz-indicator"></div>
+<div class="quiz-results" id="quiz-results"></div>
+<div class="quiz-controls">
+<button class="btn btn-primary btn-next" id="btn-next">Далее</button>
+<button class="btn btn-warning btn-restart" id="btn-restart">Пройти заново</button>
+<form id="form-results" style="visibility: hidden; margin-top: 20px">
+    <span>Введите ваш Telegram для получения результатов</span><br/>
+    <input id="usertg">
+    <input id="btnSendResults" class="btn btn-primary btn-next" type="button" value="Отправить">
+</form>
+</div>
+</div>
+<script src="js/scripts.js"></script>
+</body>
+</html>

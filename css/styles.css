@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+}
+
+.quiz {
+    margin: 0 auto;
+    width: 600px;
+}
+
+.quiz-indicator {
+    margin-bottom: 20px;
+}
+
+#btn-restart {
+    visibility: hidden;
+}
+
+.quiz--hidden,
+.questions--hidden {
+    display: none;
+}
+
+.answer-invalid {
+    color: red;
+}
+
+.answer-valid {
+    color: green;
+}
+
