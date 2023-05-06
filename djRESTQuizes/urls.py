@@ -13,14 +13,11 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from multiprocessing import Process
 
 from django.contrib import admin
 from django.urls import path, include
-from rest_framework.routers import DefaultRouter
 
-import tg_userbot
-from quizes import views
+from quizes import urls
 from quizes.views import QuizesAPIVisew, Joined, TG
 
 
@@ -28,5 +25,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/v1/quizes/', QuizesAPIVisew.as_view()),
     path('api/joined/', Joined.as_view()),
-    path('api/tg/', TG.as_view())
+    path('api/tg/', TG.as_view()),
+    path('', include(urls))
 ]
