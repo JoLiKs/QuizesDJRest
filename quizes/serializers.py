@@ -1,6 +1,7 @@
 from rest_framework import serializers
 
-from quizes.models import Quize, Answers, TGsnip
+from quizes.models import Quize, Answers
+
 
 
 class QuizeSerializer(serializers.ModelSerializer):
@@ -8,13 +9,12 @@ class QuizeSerializer(serializers.ModelSerializer):
         model = Quize
         fields = "__all__"
 
+
 class JoinedSerializer(serializers.ModelSerializer):
     class Meta:
         model = Answers
         fields = "__all__"
 
 
-class TGsnipSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = TGsnip
-        fields = "__all__"
+
+

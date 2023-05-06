@@ -3,19 +3,14 @@ from datetime import timedelta, datetime
 from django.db import models
 from datetime import datetime
 
+from sqlalchemy.orm import declarative_base
+
 
 class Quize(models.Model):
     question = models.CharField(max_length=200)
 
     def __str__(self):
         return self.question
-
-
-class TGsnip(models.Model):
-    val = models.CharField(max_length=200)
-
-    def __str__(self):
-        return self.val
 
 
 class Answers(models.Model):
@@ -25,3 +20,5 @@ class Answers(models.Model):
 
     def __str__(self):
         return self.val
+
+
